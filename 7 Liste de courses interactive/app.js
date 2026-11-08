@@ -1,23 +1,35 @@
-const form = document.querySelector("#itemForm")
-const input = document.querySelector("#itemInput")
-const submit = document.querySelector("#itemSubmit")
-const list = document.querySelector("#list")
+const input = document.querySelector("#inputItem")
+const btnAjouter = document.querySelector("#submitbtn")
+const shoppingList = document.querySelector("#shoppingList")
 
-submit.addEventListener("submit" , function(event){
-    
-    const p = document.createElement("P")
-    p.textContent = input.value 
-    const div = document.createElement("div")
-    const supbutton = document.createElement("button")
-    const ajouterbutton = document.createElement("button")
-    ajouterbutton.style.color = "gre"
-    list.appendChild(p)
-    div.appendChild(supbutton)
-    div.appendChild(ajouterbutton)
-    list.appendChild(div)
-    
-    
 
-    
+btnAjouter.addEventListener("click", function(){
+    const inputValue = input.value.trim()
+    if (inputValue === "") {
+        return      
+    }
+    const li = document.createElement("li")
+    li.textContent = inputValue
+    shoppingList.appendChild(li)
+    input.value = "";
+     
+     const btnDelete = document.createElement("button")
+     btnDelete.textContent = "Delete"
+     li.appendChild(btnDelete)
+     btnDelete.addEventListener("click" , function(){
+        li.remove();
+        btnDelete.remove();
+     });
 
-});
+     const isSold = document.createElement("button")
+     isSold.textContent = "Mark as sold"
+    li.appendChild(isSold)
+     isSold.addEventListener("click" , function(){
+        li.classList.toggle("bought");
+     });
+
+})
+
+
+
+
