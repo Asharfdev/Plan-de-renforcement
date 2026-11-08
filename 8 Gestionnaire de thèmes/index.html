@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-slate-100 flex flex-col items-center justify-center p-6">
+
+    <!-- Profile Card -->
+    <div class="profileCard bg-white w-full max-w-sm p-6 rounded-2xl shadow-xl text-center">
+
+        <img 
+            src="assets/man.png" 
+            alt="Profile"
+            class="w-28 h-28 rounded-full object-cover mx-auto mb-4 border-4 border-blue-500" >
+
+        <h2 class="text-2xl font-bold text-slate-800 mb-1">
+            Charaf
+        </h2>
+
+        <p class="text-blue-600 font-medium mb-5">
+            Frontend Developer
+        </p>
+
+        <div id="profileInfo" class="bg-slate-50 rounded-xl p-4 text-slate-600 space-y-2 mb-4">
+            <p>I am learning JavaScript.</p>
+            <p>Location: Morocco</p>
+        </div>
+
+    </div>
+
+    <!-- Color Buttons -->
+    <div class="flex gap-3 mt-6">
+
+        <button id="blueBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-lg font-medium transition">
+            Blue
+        </button>
+
+        <button id="greenBtn" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg font-medium transition">
+            Green
+        </button>
+
+        <button id="purpleBtn" class="bg-purple-500 hover:bg-purple-600 text-white px-5 py-2 rounded-lg font-medium transition">
+            Purple
+        </button>
+
+    </div>
+
+    <!-- Toggle Button -->
+    <button id="toggleBtn" class="mt-4 bg-slate-800 hover:bg-slate-900 text-white px-6 py-3 rounded-lg font-medium transition">
+        Hide Information
+    </button>
+
+</body>
+
+</html>
